@@ -1,8 +1,9 @@
-git_repository(
-    name = "io_bazel_rules_appengine",
-    remote = "https://github.com/bazelbuild/rules_appengine.git",
-    tag = "0.0.2",
+workspace(
+	name = "fusion",
 )
 
-load("@io_bazel_rules_appengine//appengine:appengine.bzl", "appengine_repositories")
-appengine_repositories()
+new_local_repository(
+	name = "assets",
+	build_file = "scripts/asset.BUILD",
+	path = "/home/andreas/Projects/bazel_examples/tutorial/assets",
+)
