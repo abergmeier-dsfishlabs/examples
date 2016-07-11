@@ -1,9 +1,6 @@
-workspace(
-	name = "fusion",
-)
+load("//:foo.bzl", "foo_repository")
 
-new_local_repository(
-	name = "assets",
-	build_file = "scripts/asset.BUILD",
-	path = "/home/andreas/Projects/bazel_examples/tutorial/assets",
+foo_repository(
+	name = "foo",
+	build_path = "@//:bar",
 )
